@@ -54,6 +54,7 @@
     NSArray *testArray = @[self.worf, self.picard, self.crusher];
     NSString *expectedString = [NSString stringWithFormat:@"%@;%@;%@", self.worf, self.picard, self.crusher];
     NSString *actualString = [self.starTrekArrays stringOfStarTrekCharactersFromArray:testArray];
+    NSLog(@"\nFAILED ACTUALSTRING = %@", actualString);
     XCTAssertEqualObjects(expectedString, actualString, @"The returned string was different than expected.");
 
     testArray = @[self.picard, self.crusher, self.worf];
