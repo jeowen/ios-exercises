@@ -19,11 +19,19 @@
 
 - (void) copyThisArrayForLater:(NSMutableArray *)arrayToCopy {
     /* WORK HERE */
+    self.arrayToCopyForLater = arrayToCopy;
+    NSLog(@"***RECEIVED arrayToCopy = %@", arrayToCopy);
 }
 
-- (void) rememberThisFloatForLater:(CGFloat)floatToRemember {
+- (void) rememberThisFloatForLater:(CGFloat )floatToCopy {
     /* WORK HERE */
+    self.floatToCopyForLater = floatToCopy;
+    NSLog(@"***RECEIVED floatToCopy = %f", floatToCopy);
 }
+
+/* - (void) rememberThisFloatForLater:(CGFloat)floatToRemember { */
+    /* WORK HERE */
+/* } */
 
 /* - (NSMutableArray *) arrayYouShouldRemember {  */
 - (NSArray *) arrayYouShouldRemember {
@@ -33,14 +41,18 @@
     return self.arrayRememberMe;
 }
 
-- (NSMutableArray *) arrayYouShouldCopy {
+ - (NSMutableArray *) arrayYouShouldCopy {
     /* WORK HERE */
-    return [@[] mutableCopy];
+    NSLog(@"******arrayYouShouldCopy = %@", self.arrayToCopyForLater);
+   /*  return self.arrayToCopyForLater; */
+    return [self.arrayToCopyForLater mutableCopy];
 }
 
 - (CGFloat) floatYouShouldRemember {
     /* WORK HERE */
-    return 0.0f;
+    return self.floatToCopyForLater;
+    NSLog(@"******RETURNING self.floatToCopyForLater: %f", self.floatToCopyForLater);
+    /* return 0.0f; */
 }
 
 @end
