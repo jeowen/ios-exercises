@@ -8,11 +8,13 @@ Strings
 
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     // WORK HERE
-    return cheese
+    let returnCheese = "My favorite cheese is " + cheese + "."
+    return returnCheese
 }
 
 let fullSentence = favoriteCheeseStringWithCheese("cheddar")
 // Make fullSentence say "My favorite cheese is cheddar."
+print(fullSentence)
 
 /*
 
@@ -20,14 +22,23 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+var numberArray = [1, 2, 3, 4]
+
+let firstItem = numberArray[0]
+
 // Add 5 to this array
 // WORK HERE
+numberArray.append(5)
+print("array is \(numberArray).")
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 // WORK HERE
-
+numberDictionary[5]="five"
+for (digitInt, digitString) in numberDictionary{
+    print ("key is \(digitInt), value is \(digitString).")
+}
 /*
 
 Loops
@@ -36,9 +47,15 @@ Loops
 
 // Use a closed range loop to print 1 - 10, inclusively
 // WORK HERE
+for i in 1 ... 10{
+    print ("i = \(i)")
+}
 
 // Use a half-closed range loop to print 1 - 10, inclusively
 // WORK HERE
+for j in 1..<10{
+    print ("j is \(j)")
+}
 
 let worf = [
     "name": "Worf",

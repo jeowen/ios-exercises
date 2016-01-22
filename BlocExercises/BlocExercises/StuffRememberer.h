@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface StuffRememberer : NSObject
-
+@property (nonatomic, strong) NSMutableArray *arrayRememberMe;
 /*
  
  In this class, there are three pairs of methods.
